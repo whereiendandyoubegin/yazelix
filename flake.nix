@@ -524,7 +524,7 @@
         then pkgs.zellij.unwrapped
         else throw "Yazelix Nova requires the nixpkgs Zellij 0.44.3 unwrapped package contract";
       yazelixZellijPackage =
-        assert zellijBuildBase.version == "0.44.3";
+        assert zellijBuildBase.version == "0.44.3" || zellijBuildBase.version == "0.45.1";
         zellijBuildBase.overrideAttrs (_old: {
         pname = "zellij";
         version = "0.45.0";
