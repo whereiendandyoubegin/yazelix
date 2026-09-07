@@ -480,7 +480,7 @@
         opener = "YZX_ZELLIJ=${yazelixZellijPackage}/bin/zellij ${yzxOpenCore}/bin/yzx-open";
       };
       yzxYaziConfig =
-        assert pkgs.yazi-unwrapped.version == "26.5.6" || "26.9.1";
+        assert pkgs.yazi-unwrapped.version == "26.5.6" || pkgs.yazi-unwrapped.version == "26.9.1";
           pkgs.runCommand "yzx-yazi-config" {} ''
         install -D -m 644 ${./defaults/yazi/init.lua} "$out/init.lua"
         install -D -m 644 ${./defaults/yazi/keymap.toml} "$out/keymap.toml"
